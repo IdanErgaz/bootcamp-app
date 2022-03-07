@@ -1,30 +1,20 @@
-# Node.js Weight Tracker
+# Sela Bootcamp
+## _Weight Tracker App_
 
-![Demo](docs/build-weight-tracker-app-demo.gif)
 
-This sample application demonstrates the following technologies.
+[Run the app](http://34.91.71.14:8080)
 
-* [hapi](https://hapi.dev) - a wonderful Node.js application framework
-* [PostgreSQL](https://www.postgresql.org/) - a popular relational database
-* [Postgres](https://github.com/porsager/postgres) - a new PostgreSQL client for Node.js
-* [Vue.js](https://vuejs.org/) - a popular front-end library
-* [Bulma](https://bulma.io/) - a great CSS framework based on Flexbox
-* [EJS](https://ejs.co/) - a great template library for server-side HTML templates
+In this project Iv'e performed the following steps:
+1. Made afor from the repository
 
-**Requirements:**
+2. Use Server 1 for APP : Clone the new repository
 
-* [Node.js](https://nodejs.org/) 14.x
-* [PostgreSQL](https://www.postgresql.org/) (can be installed locally using Docker)
-* [Free Okta developer account](https://developer.okta.com/) for account registration, login
+3. Made an OCTA web-app object
 
-## Install and Configuration
+4. On Server2 | Run postgres sql on docker,Run npm init db>  make sure it up and runnig and that port is opened for outside world
 
-1. Clone or download source files
-1. Run `npm install` to install dependencies
-1. If you don't already have PostgreSQL, set up using Docker
-1. Create a [free Okta developer account](https://developer.okta.com/) and add a web application for this app
-1. Copy `.env.sample` to `.env` and change the `OKTA_*` values to your application
-1. Initialize the PostgreSQL database by running `npm run initdb`
-1. Run `npm run dev` to start Node.js
+5. @ App server | Add an .env file and edit it to work with the OCTA keys and using the postgres user, password and ip.
 
-The associated blog post goes into more detail on how to set up PostgreSQL with Docker and how to configure your Okta account.
+6. Run ping between server 1 to server 2 and between my pc to both of them
+
+7. Use pm2 so the app will be survive in case of reboot/crash
