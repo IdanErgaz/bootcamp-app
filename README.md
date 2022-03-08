@@ -9,7 +9,8 @@ In this project Iv'e performed the following steps:
 
 2. Use Server 1 for APP : Clone the new repository
 
-3. Made an OCTA web-app object
+3. Made an OCTA web-app object - make sure to grant permissions to the app the relevant users
+   Also set the APP ip instead of the localhost for the sign in redirect url.
 
 4. On Server2 | Run postgres sql on docker,Run npm init db>  make sure it up and runnig and that port is opened for outside world
 
@@ -20,3 +21,6 @@ In this project Iv'e performed the following steps:
 7. Use pm2 so the app will be survive in case of reboot/crash
 
 8. Also edit the .bashrc file make sure the app alway run after restart so it handle reboots etc'
+
+9. After all works, I pushed the code to my forked repository using gitKey 
+
