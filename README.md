@@ -5,7 +5,7 @@
 [Run the app](http://34.91.71.14:8080)
 
 In this project Iv'e performed the following steps:
-1. Made afor from the repository
+1. Made a forK from the repository
 
 2. Use Server 1 for APP : Clone the new repository
 
@@ -18,3 +18,5 @@ In this project Iv'e performed the following steps:
 6. Run ping between server 1 to server 2 and between my pc to both of them
 
 7. Use pm2 so the app will be survive in case of reboot/crash
+
+8. Also edit the .bashrc file make sure the app alway run after restart so it handle reboots etc'
