@@ -21,11 +21,10 @@ steps:
     contents: '*.zip' 
     targetFolder: $(Build.ArtifactStagingDirectory)
 
+
 - task: UniversalPackages@0
-  displayName: Universal Publish
+  displayName: 'Upload Artifact'
   inputs:
     command: publish
-    publishDirectory: '$(Build.ArtifactStagingDirectory)'
-    vstsFeedPublish: 'my-feed2'
-    vstsFeedPackagePublish: 'my-artifact-yaml'
-    packagePublishDescription: 'weightTracker app'
+    vstsFeedPublish: '7bb0c2a2-923a-443c-ae22-ad3ebc5c70ea/6dcb044c-bd40-451d-ab60-469c18ef7eb0'
+    vstsFeedPackagePublish: 'weightTracker-artifact'
