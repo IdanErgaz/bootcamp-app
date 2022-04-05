@@ -22,9 +22,10 @@ steps:
     targetFolder: $(Build.ArtifactStagingDirectory)
 
 
+
 - task: UniversalPackages@0
   displayName: 'Upload Artifact'
   inputs:
     command: publish
     vstsFeedPublish: '7bb0c2a2-923a-443c-ae22-ad3ebc5c70ea/6dcb044c-bd40-451d-ab60-469c18ef7eb0'
-    vstsFeedPackagePublish: 'weightTracker-artifact'
+    vstsFeedPackagePublish: 'my-artifact'
