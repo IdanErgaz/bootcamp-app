@@ -14,19 +14,8 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
-#upload
-# - task: ArchiveFiles@2
-#   inputs:
-#     rootFolderOrFile: '$(Build.BinariesDirectory)'
-#     includeRootFolder: true
-#     archiveType: 'zip'
-#     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-- upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildOd).zip
-  artifact: drop
-#     replaceExistingArchive: true
-  #publish
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
