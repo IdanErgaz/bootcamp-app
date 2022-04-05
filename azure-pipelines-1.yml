@@ -11,7 +11,7 @@ pool:
   name: my-pool
   
 
-# steps:
+steps:
 # - task: NodeTool@0
 #   inputs:
 #     versionSpec: '10.x'
@@ -22,7 +22,7 @@ pool:
 #     npm run build --if-present
 #     npm run test --if-present
 #   displayName: 'npm install and build'
-
+  
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.BinariesDirectory)'
