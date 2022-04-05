@@ -8,7 +8,7 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
+  name: my-pool
 steps:
 - task: NodeTool@0
   inputs:
