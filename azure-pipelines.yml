@@ -29,3 +29,12 @@ steps:
     command: publish
     vstsFeedPublish: '7bb0c2a2-923a-443c-ae22-ad3ebc5c70ea/6dcb044c-bd40-451d-ab60-469c18ef7eb0'
     vstsFeedPackagePublish: 'my-artifact'
+- task: CmdLine@2
+  inputs:
+    script: |
+      cd ~/weightTracker-ansible2
+      echo "Be aware that the host variable is in hosts.txt file
+      pghost: \"$(pghost)\"
+      pg_username: \"$(pg_username)\"
+      pg_password: \"$(pg_password")\"
+      LB_front_ip: \"$(LB_front_ip)\"
