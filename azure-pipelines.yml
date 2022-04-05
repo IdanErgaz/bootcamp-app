@@ -14,8 +14,18 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
-- task: PublishBuildArtifacts@1
+# # Copy Files
+- task: CopyFiles@2
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+    sourceFolder: $(Build.SourcesDirectory)
+    contents: '*.zip' 
+    targetFolder: $(Build.ArtifactStagingDirectory)
+
+- task: UniversalPackages@0
+  displayName: Universal Publish
+  inputs:
+    command: publish
+    publishDirectory: '$(Build.ArtifactStagingDirectory)'
+    vstsFeedPublish: 'my-feed'
+    vstsFeedPackagePublish: 'my-artifact-yaml'
+    packagePublishDescription: 'weightTracker app'
